@@ -1,0 +1,14 @@
+# Visual Studio və IDE-lərə aid fayllar
+.vs/
+.vscode/
+*.suo
+*.user
+*.userosscache
+
+# Temporary fayllar
+*.log
+*.tmp
+
+# Build faylları
+bin/
+obj/
