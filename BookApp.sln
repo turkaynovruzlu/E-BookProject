@@ -5,11 +5,13 @@ VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookApp", "BookApp\BookApp.csproj", "{E51D5DBD-A90C-4F19-B430-05552ECA2EFC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DATA", "DATA\DATA.csproj", "{84C30F1C-2DB8-442D-BE62-EB65E001E875}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DATA", "DATA\DATA.csproj", "{84C30F1C-2DB8-442D-BE62-EB65E001E875}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookRepository", "BookRepository\BookRepository.csproj", "{B733BB30-89CF-4A65-AB38-DE0D31B22865}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repository", "BookRepository\Repository.csproj", "{B733BB30-89CF-4A65-AB38-DE0D31B22865}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookService", "BookService\BookService.csproj", "{8EED1296-2B7F-459F-953A-D8DC770CE334}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookService", "BookService\BookService.csproj", "{8EED1296-2B7F-459F-953A-D8DC770CE334}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainLayer", "DomainLayer\DomainLayer.csproj", "{C62C9F7B-B76A-43B6-A558-2F3612F17418}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{8EED1296-2B7F-459F-953A-D8DC770CE334}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8EED1296-2B7F-459F-953A-D8DC770CE334}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8EED1296-2B7F-459F-953A-D8DC770CE334}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C62C9F7B-B76A-43B6-A558-2F3612F17418}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C62C9F7B-B76A-43B6-A558-2F3612F17418}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C62C9F7B-B76A-43B6-A558-2F3612F17418}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C62C9F7B-B76A-43B6-A558-2F3612F17418}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

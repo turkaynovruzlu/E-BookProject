@@ -1,6 +1,7 @@
 using DATA.Data;
 using DATA.Data.Entity;
 using DATA.Extensions;
+using DomainLayer;
 using Microsoft.AspNetCore.Identity;
 using Newtonsoft.Json;
 
@@ -10,6 +11,7 @@ var configuration=builder.Configuration;
 services.AddControllers();
 services.AddEndpointsApiExplorer();
 services.AddSwaggerGen();
+services.AddDomainLayer();
 
 builder.Services.AddServices(configuration);
 
