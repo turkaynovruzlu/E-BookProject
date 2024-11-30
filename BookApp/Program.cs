@@ -4,6 +4,7 @@ using DATA.Extensions;
 using DomainLayer;
 using Microsoft.AspNetCore.Identity;
 using Newtonsoft.Json;
+using Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 var services=builder.Services;
@@ -12,6 +13,7 @@ services.AddControllers();
 services.AddEndpointsApiExplorer();
 services.AddSwaggerGen();
 services.AddDomainLayer();
+services.AddRepositoryConfig();
 
 builder.Services.AddServices(configuration);
 

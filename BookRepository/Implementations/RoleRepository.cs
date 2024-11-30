@@ -1,5 +1,6 @@
 ﻿using DATA.Data;
 using DATA.Data.Entity;
+using Repository.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
