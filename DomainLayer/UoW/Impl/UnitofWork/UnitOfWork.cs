@@ -1,7 +1,6 @@
 ﻿using Repository.Interfaces;
 using DATA.Data;
 using DomainLayer.UoW.Interface;
-using Repository.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;

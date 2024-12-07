@@ -1,4 +1,5 @@
-﻿using DomainLayer.UoW.Interface;
+﻿using DomainLayer.UoW.Impl.UnitofWork;
+using DomainLayer.UoW.Interface;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -13,7 +14,7 @@ namespace DomainLayer
     {
         public static void AddDomainLayer(this IServiceCollection services)
         {
-            services.AddScoped<IUnitofWork, IUnitofWork>();
+            services.AddScoped<IUnitofWork, UnitOfWork>();
         }
     }
 }

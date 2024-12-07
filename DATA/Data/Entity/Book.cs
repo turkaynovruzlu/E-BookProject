@@ -7,7 +7,6 @@ namespace DATA.Data.Entity
     {
         public ICollection<Comment> Comments { get; set; }
         public string Bookname { get; set; }
-        public string AuthorName { get; set; }
         public int Price { get; set; }
         public string Genre { get; set; }
         public int PageCount { get; set; }
@@ -15,6 +14,7 @@ namespace DATA.Data.Entity
         public string Publisher { get; set; }
         public ICollection<Payment> Payments { get; set; }
         public ICollection<Score> Scores { get; set; }
+        public ICollection<BookUser> BookUsers { get; set; }
 
     }
 }

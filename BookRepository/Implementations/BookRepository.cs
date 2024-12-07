@@ -21,7 +21,7 @@ namespace Repository.Implementations
 
         public async Task<List<Book>> SearchBook(string x)
         {
-            return await bookDbContext.Books.Where(m => x == m.Bookname || x == m.Genre || x == m.Publisher || x == m.AuthorName).ToListAsync();
+            return await bookDbContext.Books.Where(m => x == m.Bookname || x == m.Genre || x == m.Publisher ).ToListAsync();
         }
 
         public async Task<List<Book>> SearchBook(int x)

@@ -30,10 +30,6 @@ namespace DATA.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("AuthorName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Bookname")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -385,13 +381,13 @@ namespace DATA.Migrations
             modelBuilder.Entity("DATA.Data.Entity.BookUser", b =>
                 {
                     b.HasOne("DATA.Data.Entity.Book", "Book")
-                        .WithMany()
+                        .WithMany("BookUsers")
                         .HasForeignKey("BookId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("DATA.Data.Entity.User", "User")
-                        .WithMany()
+                        .WithMany("BookUsers")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -503,6 +499,8 @@ namespace DATA.Migrations
 
             modelBuilder.Entity("DATA.Data.Entity.Book", b =>
                 {
+                    b.Navigation("BookUsers");
+
                     b.Navigation("Comments");
 
                     b.Navigation("Payments");
@@ -512,6 +510,8 @@ namespace DATA.Migrations
 
             modelBuilder.Entity("DATA.Data.Entity.User", b =>
                 {
+                    b.Navigation("BookUsers");
+
                     b.Navigation("Comments");
 
                     b.Navigation("Payments");

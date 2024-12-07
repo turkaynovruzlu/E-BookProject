@@ -10,6 +10,7 @@ namespace DATA.Data.Entity
         public DateTime CreatedDate { get; set; }
         public int Age { get; set; }
         public ICollection<Payment> Payments { get; set; }
+        public ICollection<BookUser> BookUsers { get; set; }
         public ICollection<Comment> Comments { get; set; }
         //PhoneNumber ve Email identityuserde var
     }

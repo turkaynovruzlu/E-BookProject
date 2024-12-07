@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DATA.Migrations
 {
     [DbContext(typeof(BookDbContext))]
-    [Migration("20241116161409_InitalDb")]
-    partial class InitalDb
+    [Migration("20241207132119_december")]
+    partial class december
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -32,10 +32,6 @@ namespace DATA.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("AuthorName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Bookname")
                         .IsRequired()
@@ -388,13 +384,13 @@ namespace DATA.Migrations
             modelBuilder.Entity("DATA.Data.Entity.BookUser", b =>
                 {
                     b.HasOne("DATA.Data.Entity.Book", "Book")
-                        .WithMany()
+                        .WithMany("BookUsers")
                         .HasForeignKey("BookId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("DATA.Data.Entity.User", "User")
-                        .WithMany()
+                        .WithMany("BookUsers")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -506,6 +502,8 @@ namespace DATA.Migrations
 
             modelBuilder.Entity("DATA.Data.Entity.Book", b =>
                 {
+                    b.Navigation("BookUsers");
+
                     b.Navigation("Comments");
 
                     b.Navigation("Payments");
@@ -515,6 +513,8 @@ namespace DATA.Migrations
 
             modelBuilder.Entity("DATA.Data.Entity.User", b =>
                 {
+                    b.Navigation("BookUsers");
+
                     b.Navigation("Comments");
 
                     b.Navigation("Payments");
